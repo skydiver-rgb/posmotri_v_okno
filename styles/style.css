@@ -47,7 +47,6 @@ ol {
 
 .result {
   margin-top: 78px;
-  min-height: 456px;
 }
 
 .result__video-container {
@@ -99,17 +98,21 @@ video {
   outline-offset: 2px;
 }
 
+.search-form__checkbox {
+  appearance: none;
+}
+
 .search-form__textfield {
   font-size: 18px;
   line-height: 22px;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   min-width: 225px;
   background-color: transparent;
   appearance: none;
   border-width: 1px 0px;
   border-style: solid;
   border-color: #ffffff;
+  color: white;
 }
 
 .search-form__textfield:focus {
@@ -121,7 +124,7 @@ video {
 }
 
 .search-form__textfield:active {
-  border: 1px solid #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .search-form__checkbox-list {
@@ -171,7 +174,7 @@ video {
 .button {
   cursor: pointer;
   font-size: 18px;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   color: white;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -220,7 +223,7 @@ video {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
@@ -236,7 +239,7 @@ video {
 .content__list {
   margin-top: 20px;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -266,8 +269,7 @@ video {
 }
 
 .content__card-link:focus-visible {
-  outline: none;
-  border: 1px solid #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .content__card-link:active {
@@ -287,16 +289,20 @@ video {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px;
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16px;
@@ -305,10 +311,12 @@ video {
 .content__video-card-thumbnail {
   max-width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .error__title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
